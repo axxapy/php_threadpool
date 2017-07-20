@@ -1,6 +1,7 @@
 Single thread
 =============
-`````````
+Example:
+```php
 $Threads = [];
 $Threads[] = new Thread(function(Thread $Thread) {
 	$Thread->saveData(file_get_contents($Thread->getLaunchParams()[0]));
@@ -23,11 +24,12 @@ array_walk($Threads, function(Thread $Thread) {
 
 ThreadPool
 ==========
-Allows to execute unlimited number of threads
-Manages child tasks and respawns them if they died without setting their status as "complete"
-It is useful to execute scripts with memory leak
-Can be used for daemon implementation
-```
+- Allows to execute unlimited number of threads.
+- Manages child tasks and respawns them if they died without setting their status as "complete".
+- It is useful to execute scripts with memory leak.
+- Can be used for daemon implementation.
+Example:
+```php
 $res = (new ThreadPool(10)) //threads count
 	->setTask(function (Thread $Thread) {
 		$data = $Thread->getSavedData();
