@@ -9,15 +9,8 @@
 			"email": "axxapy@gmail.com"
 		}
 	],
-	"minimum-stability": "dev",
-	"repositories": [
-		{
-			"type": "vcs",
-			"url":  "https://github.com/axxapy/php_core.git"
-		}
-	],
 	"require": {
-		"axxapy/php_core": "dev-master"
+		"axxapy/php_core": "^1.0"
 	},
 	"autoload": {
 		"psr-4": {
