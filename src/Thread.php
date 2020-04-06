@@ -247,9 +247,9 @@ class Thread implements Runnable {
 			$sid = posix_setsid();
 			$sid && call_user_func($this->Closure, $this);
 
-			die(0);
-
 			posix_kill($sid, 9); //on some builds die could not work
+			die(0); // die after attempt to kill: sometimes even after script dies, for waits for parent to finish
+
 			throw new RuntimeException('die() does not work! This should never happen!');
 
 			return true;
