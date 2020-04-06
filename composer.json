@@ -1,20 +1,21 @@
 {
-	"name": "axxapy/php_threadpool",
-	"description": "Thread && Thread pool wrappers for pcntl (not actual threads but forks)",
-	"type": "library",
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Alexey Manukhin",
-			"email": "axxapy@gmail.com"
-		}
-	],
-	"require": {
-		"axxapy/php_core": "^1.0"
-	},
-	"autoload": {
-		"psr-4": {
-			"axxapy\\ThreadPool\\": "src"
-		}
-	}
+  "name": "axxapy/php_threadpool",
+  "description": "Thread && Thread pool wrappers for pcntl (not actual threads but forks)",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexey Manukhin",
+      "email": "axxapy@gmail.com"
+    }
+  ],
+  "require": {
+    "axxapy/php_core": "^1.0",
+    "ext-pcntl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "axxapy\\ThreadPool\\": "src"
+    }
+  }
 }
